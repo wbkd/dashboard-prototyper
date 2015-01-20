@@ -8,7 +8,9 @@ var defaultStyles = {
     sidebarbg : '#303030',
     sidebarcol : '#f4f4f4',
     boardbg : '#f4f4f4',
-    boardcol : '#222222'
+    boardcol : '#222222',
+    widgetbg: '#fff',
+    widgetcol: '#222'
 }
 
 module.exports.init = function(){
@@ -25,7 +27,8 @@ module.exports.init = function(){
     getCSSRule('.rdb-title', style.titlebg, style.titlecol) + 
     getCSSRule('.rdb-sidebar a', style.sidebarbg, style.sidebarcol) + 
     getCSSRule('.rdb-sidebar', style.sidebarbg, style.sidebarcol) + 
-    getCSSRule('.rdb-board', style.boardbg, style.boardcol);
+    getCSSRule('body', style.boardbg, style.boardcol) + 
+    getCSSRule('.rdb-widget-content', style.widgetbg, style.widgetcol);
   
   dom.get('head').appendChild(stylesheet);
 }

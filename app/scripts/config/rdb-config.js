@@ -28,15 +28,18 @@ var widgetsA = [
   },
   { type: 'iframe',
     properties: {
+      title : 'test',
       src: 'http://webkid.io'
     }
   }
+  
 ];
 
 var widgetsB = [
   {
     type: 'line',
     properties: {
+      title : 'whoop',
       data: getRandomData(25)
     }
   },
@@ -61,7 +64,10 @@ module.exports = {
     sidebarcol : '#f4f4f4',
     
     boardbg : '#f4f4f4',
-    boardcol : '#222222'
+    boardcol : '#222222',
+    
+    widgetbg: '#fff',
+    widgetcol: '#222'
   },
   boards: [
     {

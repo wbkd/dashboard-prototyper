@@ -56,14 +56,17 @@ var Widget = React.createClass({
     }
   },
 
+  
   render: function() {
     
     return (
       <div className="rdb-widget-wrapper rdb-widget-map">
-        <div className="rdb-widget">
+        <div className="rdb-widget-content">
           { this.getTitle() }
-          <div className="map" id={ this.props._id }></div>
-        </div> 
+          <div className="rdb-widget">
+            <div className="map" id={ this.props._id }></div>
+          </div> 
+        </div>
       </div>
     );
   }

@@ -10,12 +10,19 @@ var Widget = React.createClass({
   },
   
   render: function() {
-      
+    
+    var style = { padding : '1rem' };
+    
     return (
       <div className="rdb-widget-wrapper rdb-widget-list">
-        <div className="rdb-widget">
-          <div id={this.props._id}></div>
-        </div> 
+        <div className="rdb-widget-content">
+          { this.getTitle() }
+          <div style={ style }>
+            <div className="rdb-widget">
+              <div id={this.props._id}></div>
+            </div> 
+          </div>
+        </div>
       </div>
     );
   }

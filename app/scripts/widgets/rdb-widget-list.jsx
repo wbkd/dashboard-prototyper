@@ -12,12 +12,14 @@ var Widget = React.createClass({
   
     return (
       <div className="rdb-widget-wrapper rdb-widget-list">
-        <div className="rdb-widget">
+        <div className="rdb-widget-content">
           { this.getTitle() }
-          <ul>
-          { items }
-          </ul>
-        </div> 
+          <div className="rdb-widget"> 
+            <ul>
+            { items }
+            </ul>
+          </div> 
+        </div>
       </div>
     );
   }

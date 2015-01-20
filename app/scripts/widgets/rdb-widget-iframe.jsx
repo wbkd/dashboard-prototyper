@@ -21,10 +21,12 @@ var Widget = React.createClass({
     
     return (
       <div className="rdb-widget-wrapper rdb-widget-iframe">
-        <div className="rdb-widget">
+        <div className="rdb-widget-content">
           { this.getTitle() }
-          <iframe src={this.props.src} frameBorder="0" style={ style }></iframe>
-        </div> 
+          <div className="rdb-widget">
+            <iframe src={this.props.src} frameBorder="0" style={ style }></iframe>
+          </div> 
+        </div>
       </div>
     );
   }

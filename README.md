@@ -67,12 +67,8 @@ module.exports = {
   name: 'Awesome dashboard',
   style: {
     font : 'Roboto',
-    titlebg : '#eeeeee',
-    titlecol : 'red',
-    sidebarbg : '#303030',
-    sidebarcol : '#f4f4f4',
-    boardbg : '#f4f4f4',
-    boardcol : '#222222'
+    titlebg : '#fff',
+    titlecol : 'red'
   },
   boards: [
     {
@@ -116,6 +112,8 @@ Available fonts are:
 * `sidebarcol` Font color of the sidebar. Default: `'#f4f4f4'`
 * `boardbg` Background color of the boards. Default: `'#f4f4f4'`
 * `boardcol` Font color of the boards. Default: `'#222222'`
+* `widgetbg` Background color of the widgets. Default: `'#ffffff'`
+* `widgetcol` Font color of the widgets. Default: `'#222222'`
 
 
 **Example style:**
