@@ -1,6 +1,6 @@
 # React-Dashboard (RDB)
 
-** This is project is at an early stage of development!**
+**This is project is at an early stage of development!**
 
 RDB helps you to generate dashboard prototypes very quickly with "configuration over code".
 You just need to specify the boards and the belonging widgets in the [RDB config file](#rdb-config-file) file and you are ready to build your dashboard.
