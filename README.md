@@ -53,13 +53,13 @@ The config file has three attributes (name, [style](#style) and [boards](#boards
 The name is displayed at the top of the sidebar as the title of the dashboard. 
 Appearance indicates stuff like the font, colors etc and under boards (the important part) you configure the different sites and their related widgets.
 
-Properties:
+**Properties:**
 
   * `name` String that defines the dashboard title. Default: 'RDB Dashboard'.
   * `style` Object with [style](#style) properties
   * `boards` Array with [boards](#boards)
 
-Example config file:
+**Example config file:**
 
 ```javascript
 
@@ -107,7 +107,7 @@ Available fonts are:
   * Roboto
   * Open Sans
 
-Properties:
+**Properties:**
 
 * `font` Font type. Default: `'PT Sans'`
 * `titlebg` Background color of the title. Default: `'#eeeeee'`.
@@ -118,7 +118,7 @@ Properties:
 * `boardcol` Font color of the boards. Default: `'#222222'`
 
 
-Example style:
+**Example style:**
 
 ```javascript
   style: {
@@ -140,7 +140,7 @@ The boards property is an array with board objects. A board object has a name an
 When you build the dashboard, the several boards are dynamically generated in [Routes](app/scripts/routes.jsx) with the help of the [Board Factory](app/scripts/factories/rdb-board-factory.jsx).
 The [Board Component](app/scripts/components/rdb-board.jsx) then displays the title and loads its widgets.
 
-Example board:
+**Example Board:**
 
 ```javascript
 
@@ -171,7 +171,7 @@ For now there are these widgets available:
 
 The map widget is based on [Leaflet](http://leafletjs.com). It displays a map with a certain center and markers with tooltips.
 
-Properties:
+**Properties:**
 
   * `title` String that defines the widget title. Default: No Title.
   * `center` Array with Coordinates. Default: `[0,0]`
@@ -181,7 +181,7 @@ Properties:
     * `latlng` Array with Coordinates.
     * `text` String with tooltip content. Default: No content.
 
-Example Map Widget Configuration:
+**Example Map Widget Configuration:**
 
 ```javascript
 
@@ -205,13 +205,13 @@ Source: [Map Widget](app/scripts/widgets/rdb-widget-map.jsx)
 
 The bar chart widget is based on [c3](http://c3js.org).
 
-Properties:
+**Properties:**
 
   * `title` String that defines the widget title. Default: No Title.
   * `data` Array with JSON data. Default: [{ alpha: 100, beta : 120, gamma: 110 },{ alpha: 120, beta : 110, gamma: 90 },{ alpha: 75, beta : 100,gamma: 80 }]
   * `keys` Array with keys you want to display. Default: Every key found in the passed data.
 
-Example Map Widget Configuration:
+**Example Map Widget Configuration:**
 
 ```javascript
 
@@ -237,11 +237,11 @@ Source: [Line Chart Widget](app/scripts/widgets/rdb-widget-line.jsx)
 
 Displays a certain webpage.
 
-Properties:
+**Properties:**
   * `title` String that defines the widget title. Default: No Title.
   * `src` String that defines the url you want to display. Default: 'http://news.ycombinator.com'.
 
-Example IFrame Widget Configuration:
+**Example IFrame Widget Configuration:**
 
 ```javascript
 {
