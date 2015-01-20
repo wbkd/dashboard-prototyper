@@ -24,9 +24,12 @@ var autoprefixerBrowsers = [
   'bb >= 10'
 ];
 
+var jsFilesFilter = $.filter(['*.{js,jsx}']);
+
 gulp.task('scripts', function() {
   return gulp.src(webpackConfig.entry)
     .pipe($.webpack(webpackConfig))
+    .pipe(jsFilesFilter)
     .pipe(isProduction ? $.uglifyjs() : $.util.noop())
     .pipe(gulp.dest(dist + 'js/'))
     .pipe($.size({ title : 'js' }))

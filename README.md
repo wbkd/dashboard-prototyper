@@ -158,8 +158,8 @@ The [Board Component](app/scripts/components/rdb-board.jsx) then displays the ti
 
 The widgets are defined in the board objects. A widget object has a type and properties.
 The type specifies the widget type and the properties define all data that get passed to the widget.
-Widgets are created in the [Board Component](app/scripts/components/rdb-board.jsx) with the help of [Widget Factory](app/scripts/factories/rdb-widget-factory.jsx).
-
+Widgets are created in the [Board Component](app/scripts/components/rdb-board.jsx) with the help of [Widget Factory](app/scripts/factories/rdb-widget-factory.jsx). 
+ 
 For now there are these widgets available:
 
 * Map Widget
