@@ -1,26 +1,19 @@
 var React = require('react');
-var WidgetMixin = require('WidgetMixin');
+var BaseWidget = require('./rdb-base-widget.jsx');
    
 var Widget = React.createClass({
-  mixins: [WidgetMixin],
   
   render: function() {
 
     var items = this.props.data.map(function(item,i){
         return <li key={item + '-' + i + (+new Date())}>{item}</li>
-      });
-  
-    return (
-      <div className="rdb-widget-wrapper rdb-widget-list">
-        <div className="rdb-widget-content">
-          { this.getTitle() }
+      }),widget = (
           <div className="rdb-widget"> 
-            <ul>
-            { items }
-            </ul>
-          </div> 
-        </div>
-      </div>
+            <ul>{ items }</ul>
+          </div>);
+
+    return (
+      <BaseWidget {...this.props} widget={widget}/>
     );
   }
 

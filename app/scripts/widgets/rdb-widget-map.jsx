@@ -58,11 +58,12 @@ var Widget = React.createClass({
   
   render: function() {
     
-    var widget = (
+    var style = {height : '100%'},
+      widget = (
       <div className="rdb-widget">
-        <div className="map" id={ this.props._id }></div>
+        <div style={style} id={ this.props._id }></div>
       </div>
-    )
+    );
     
     return (
       <BaseWidget {...this.props} widget={widget}/>
