@@ -1,9 +1,10 @@
 var React = require('react');
 var BaseWidget = require('BaseWidget');
 
-var Note = require('./note.js');
-var NotesStore = require('./notesStore.js');
-var NotesActions = require('./notesActions.js');
+var Todo = require('./todo.jsx');
+var TodosStore = require('./todosStore.js');
+var TodosActions = require('./todosActions.js');
+require('./style.css');
 
 var Widget = React.createClass({
     
@@ -18,9 +19,9 @@ var Widget = React.createClass({
   },
   
   componentDidMount: function(){
-    this.unsubscribe = NotesStore.listen(this.onStatusChange);
+    this.unsubscribe = TodosStore.listen(this.onStatusChange);
     
-    NotesActions.getNotes();
+    TodosActions.get();
   },
   
   conponentWillUnmount: function(){
@@ -30,17 +31,27 @@ var Widget = React.createClass({
   onStatusChange: function(state){
     this.setState(state);
   },
+  
+  toggle: function(){
+    console.log(this);
+    //TodosActions.toggle();
+  },
 
   render: function() {
     
     var style = { width : '100%', height: '100%' },
-        notes = this.props.data.map(function(note){
-          return <Note {...note}/>;
+        todos = this.props.data.map(function(todo,i){
+          
+          if(typeof todo.isDone === 'undefined'){
+            todo.isDone = false;
+          }
+          
+          return <Todo key={todo.text + '-' + i} {...todo} />;
         }),
         widget = (
-          <div className="rdb-widget rdb-widget-notes">
+          <div className="rdb-widget rdb-widget-todos">
             <ul>
-              { notes }
+              { todos }
             </ul>
           </div>);
     

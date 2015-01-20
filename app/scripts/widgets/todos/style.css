@@ -1,0 +1,17 @@
+.rdb-widget-todos ul{
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+.rdb-widget-todos ul li{
+  display:block;
+  padding:.5rem 1rem;
+  border-bottom:1px solid #eee;
+  cursor:pointer;
+}
+.rdb-widget-todos ul li.is-done{
+  text-decoration: line-through;
+}
+.rdb-widget-todos ul li:hover{
+  background:#eee;
+}
