@@ -48,6 +48,18 @@ var widgetsB = [
     properties: {
       data: getRandomData(50)
     }
+  },
+   {
+    type: 'line',
+    properties: {
+      data: getRandomData(100)
+    }
+  },
+   {
+    type: 'bar',
+    properties: {
+      data: getRandomData(78)
+    }
   }
 ];
 
