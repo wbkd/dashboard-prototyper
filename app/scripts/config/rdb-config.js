@@ -37,26 +37,26 @@ var widgetsA = [
 
 var widgetsB = [
   {
-    type: 'line',
+    type: 'linechart',
     properties: {
       title : 'whoop',
       data: getRandomData(25)
     }
   },
   {
-    type: 'bar',
+    type: 'barchart',
     properties: {
       data: getRandomData(50)
     }
   },
    {
-    type: 'line',
+    type: 'linechart',
     properties: {
       data: getRandomData(100)
     }
   },
    {
-    type: 'bar',
+    type: 'barchart',
     properties: {
       data: getRandomData(78)
     }

@@ -146,7 +146,7 @@ The [Board Component](app/scripts/components/rdb-board.jsx) then displays the ti
   name: 'Site A',
   widgets: [
     {type : 'map', properties: { center : [52.25, 13.4] }}, 
-    {type : 'line', properties: { data : jsonObj }}
+    {type : 'linechart', properties: { data : jsonObj }}
   ]
 }
     
@@ -209,14 +209,14 @@ The bar chart widget is based on [c3](http://c3js.org).
   * `data` Array with JSON data. Default: [{ alpha: 100, beta : 120, gamma: 110 },{ alpha: 120, beta : 110, gamma: 90 },{ alpha: 75, beta : 100,gamma: 80 }]
   * `keys` Array with keys you want to display. Default: Every key found in the passed data.
 
-**Example Map Widget Configuration:**
+**Example Bar Chart Widget Configuration:**
 
 ```javascript
 
 {
-  type: 'bar',
+  type: 'barchart',
   properties: {
-    title : 'A Line Chart \o/',
+    title : 'A Bar Chart \o/',
     data: [{ alpha: 100, beta : 120, gamma: 110 },{ alpha: 120, beta : 110, gamma: 90 },{ alpha: 75, beta : 100,gamma: 80 }],
     keys : ['alpha', 'gamma']
   }
@@ -227,7 +227,20 @@ Source: [Bar Chart Widget](app/scripts/widgets/bar/index.jsx)
 
 #### Line Chart Widget
 
-Same configuration as the bar chart widget.
+Almost the same configuration as the bar chart widget but type is equal `linechart` in this case.
+
+```javascript
+
+{
+  type: 'linechart',
+  properties: {
+    title : 'A Line Chart \o/',
+    data: [{ alpha: 100, beta : 120, gamma: 110 },{ alpha: 120, beta : 110, gamma: 90 },{ alpha: 75, beta : 100,gamma: 80 }],
+    keys : ['beta']
+  }
+}
+
+```
 
 Source: [Line Chart Widget](app/scripts/widgets/line/index.jsx)
 
