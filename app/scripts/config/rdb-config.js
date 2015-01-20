@@ -46,19 +46,19 @@ var widgetsB = [
   {
     type: 'barchart',
     properties: {
-      data: getRandomData(50)
+      data: getRandomData(15)
     }
   },
    {
     type: 'linechart',
     properties: {
-      data: getRandomData(100)
+      data: getRandomData(75)
     }
   },
    {
     type: 'barchart',
     properties: {
-      data: getRandomData(78)
+      data: getRandomData(30)
     }
   }
 ];

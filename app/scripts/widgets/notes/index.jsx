@@ -1,6 +1,10 @@
 var React = require('react');
 var BaseWidget = require('BaseWidget');
-   
+
+var Note = require('./note.js');
+var NotesStore = require('./notesStore.js');
+var NotesActions = require('./notesActions.js');
+
 var Widget = React.createClass({
     
   getDefaultProps: function(){
@@ -12,6 +16,20 @@ var Widget = React.createClass({
   propTypes: {
     data: React.PropTypes.array
   },
+  
+  componentDidMount: function(){
+    this.unsubscribe = NotesStore.listen(this.onStatusChange);
+    
+    NotesActions.getNotes();
+  },
+  
+  conponentWillUnmount: function(){
+    this.unsubscribe();
+  },
+  
+  onStatusChange: function(state){
+    this.setState(state);
+  },
 
   render: function() {
     
@@ -20,7 +38,7 @@ var Widget = React.createClass({
           return <Note {...note}/>;
         }),
         widget = (
-          <div className="rdb-widget">
+          <div className="rdb-widget rdb-widget-notes">
             <ul>
               { notes }
             </ul>
