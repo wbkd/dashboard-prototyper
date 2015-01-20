@@ -13,13 +13,13 @@ RDB is based on our [react starterkit](https://github.com/wbkd/react-starterkit)
 
 # Get Started
 
-## Clone RDB
+### Clone RDB
 
 ```
 $ git clone https://github.com/wbkd/react-dashboard.git && cd react-dashboard
 ```
 
-## Installation
+### Installation
 
 Install all dependencies. 
 
@@ -27,7 +27,7 @@ Install all dependencies.
 $ npm install
 ```
 
-## Development
+### Development
 
 Builds the application and starts a webserver with livereload. By default the webserver starts at port 1337.
 You can define a port with `$ gulp --port 3333`.
@@ -36,7 +36,7 @@ You can define a port with `$ gulp --port 3333`.
 $ gulp
 ```
 
-## Build
+### Build
 
 Builds a minified version of the application in the dist folder.
 
@@ -46,7 +46,7 @@ $ gulp build --type production
 
 # Documentation
 
-## RDB config file
+### RDB config file
 
 You can find the config file under `app/config/rdb-config.js`.
 The config file has three attributes (name, [style](#style) and [boards](#boards) with their [widgets](#widgets)).
@@ -94,7 +94,7 @@ module.exports = {
 
 ```
 
-## Style
+### Style
 
 For now it's only possible to tweak some colors and change the font type.
 You can find the available fonts and the font loading logic in the [Font Loader](app/scripts/helper/rdb-font-loader.js).
@@ -135,7 +135,7 @@ Example style:
 ```
 
 
-## Boards
+### Boards
 
 The boards property is an array with board objects. A board object has a name and and several widgets.
 When you build the dashboard, the several boards are dynamically generated in [Routes](app/scripts/routes.jsx) with the help of the [Board Factory](app/scripts/factories/rdb-board-factory.jsx).
@@ -155,7 +155,7 @@ Example board:
     
 ```
 
-## Widgets
+### Widgets
 
 The widgets are defined in the board objects. A widget object has a type and properties.
 The type specifies the widget type and the properties define all data that get passed to the widget.
@@ -202,7 +202,7 @@ Example Map Widget Configuration:
 Source: [Map Widget](app/scripts/widgets/rdb-widget-map.jsx)
 
 
-### Bar Chart Widget
+#### Bar Chart Widget
 
 The bar chart widget is based on [c3](http://c3js.org).
 
@@ -228,13 +228,13 @@ Example Map Widget Configuration:
 ```
 Source: [Bar Chart Widget](app/scripts/widgets/rdb-widget-bar.jsx)
 
-### Line Chart Widget
+#### Line Chart Widget
 
 Same configuration as the bar chart widget.
 
 Source: [Line Chart Widget](app/scripts/widgets/rdb-widget-line.jsx)
 
-### IFrame Widget
+#### IFrame Widget
 
 Displays a certain webpage.
 
@@ -260,7 +260,7 @@ Source: [IFrame Widget](app/scripts/widgets/rdb-widget-iframe.jsx)
 
 # Extend RDB
 
-### Widgets
+#### Widgets
 
 Every widgets ships its own dependencies. You can use the css-loader to load CSS dependencies.
 The map widget for example loads leaflet.js and the related CSS file:
