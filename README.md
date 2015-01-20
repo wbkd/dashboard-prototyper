@@ -1,7 +1,7 @@
 # React-Dashboard (RDB)
 
 RDB helps you to generate dashboard prototypes very fastly with "configuration over code".
-You just need to specify the [boards](#boards) and the belonging [widgets](#widgets) in the [RDB config file](#rdb-config-file) file.
+You just need to specify the boards and the belonging widgets in the [RDB config file](#rdb-config-file) file.
 It's also easy to extend RDB by [writing your own widgets](#writing-your-own-widgets).
 
 RDB is based on our [react starterkit](https://github.com/wbkd/react-starterkit).
@@ -271,6 +271,10 @@ var L = require('leaflet');
 require('../../../node_modules/leaflet/dist/leaflet.css');
 
 ```
+
+#### Writing your own Widgets
+
+Todo
 
 
 
