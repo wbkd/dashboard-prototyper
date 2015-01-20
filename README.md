@@ -97,8 +97,8 @@ module.exports = {
 ## Style
 
 For now it's only possible to tweak some colors and change the font type.
-You can find the available fonts and the font loading logic under `app/helper/rdb-font-loader.js`.
-The styles are applied in `app/scripts/helper/rdb-style.js`.
+You can find the available fonts and the font loading logic in the [Font Loader](app/helper/rdb-font-loader.js).
+The styles are applied in the [Styler Module](app/scripts/helper/rdb-styler.js).
 
 Available fonts are:
   * Droid Sans
