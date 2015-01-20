@@ -1,0 +1,73 @@
+@import 'normalize'
+@import 'helper'
+@import 'widgets'
+
+/* variables */
+$lightgrey = #999
+$linkColor = #555
+$grey = #eee
+$black = #222
+$white = #f7f7f7
+
+*
+  box-sizing: border-box
+  padding: 0
+  margin: 0
+
+html
+body
+.dashboard
+  height:100%
+
+html
+button
+input
+select
+textarea 
+  color: $black
+
+a
+a:visited
+  color: $linkColor
+  text-decoration: none
+
+a:hover
+  color: lighten($linkColor,10%)
+  
+body
+  color: $black
+  font-size: 1em
+  line-height: 1.5
+
+.rdb-sidebar
+  position:fixed  
+  background: #303030
+  width:20%
+  height:100%
+  
+.rdb-title
+  background:#eee
+  padding: 1rem
+  font-size:1.25rem
+  font-weight:700
+
+.nav-item
+  padding: 1rem
+  display:block
+
+  &.active
+    color: #f9f9f9
+    background: #444
+  
+  a
+  a:visited
+  a:hover
+    color: #ddd
+    background: #303030
+
+    
+.content
+  padding-left:20%;
+  
+.rdb-board-title
+  padding:1rem
