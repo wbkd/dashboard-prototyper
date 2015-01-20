@@ -61,7 +61,7 @@ Properties:
 
 Example config file:
 
-```
+```javascript
 
 module.exports = {
   name: 'Awesome dashboard',
@@ -120,8 +120,7 @@ Properties:
 
 Example style:
 
-```
-
+```javascript
   style: {
     font : 'PT Sans',
     titlebg : '#eeeeee',
