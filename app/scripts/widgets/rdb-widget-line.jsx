@@ -6,7 +6,11 @@ var Widget = React.createClass({
   mixins: [ChartMixin],
 
   componentDidMount: function () {
-    this.createChart({ type : 'line' });
+     this.chart = this.createChart({ type : 'line' });
+  },
+  
+  componentWillUnmount: function(){
+    this.chart.destroy();
   },
   
   render: function() {
