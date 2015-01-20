@@ -1,12 +1,11 @@
 var React = require('react');
-var WidgetMixin = require('WidgetMixin');
+var BaseWidget = require('./rdb-base-widget.jsx');
 
 var L = require('leaflet');
 require('../../../node_modules/leaflet/dist/leaflet.css');
 L.Icon.Default.imagePath = 'images';
 
 var Widget = React.createClass({
-  mixins: [WidgetMixin],
   getDefaultProps: function(){
     return {
       center : [0,0],
@@ -59,15 +58,14 @@ var Widget = React.createClass({
   
   render: function() {
     
-    return (
-      <div className="rdb-widget-wrapper rdb-widget-map">
-        <div className="rdb-widget-content">
-          { this.getTitle() }
-          <div className="rdb-widget">
-            <div className="map" id={ this.props._id }></div>
-          </div> 
-        </div>
+    var widget = (
+      <div className="rdb-widget">
+        <div className="map" id={ this.props._id }></div>
       </div>
+    )
+    
+    return (
+      <BaseWidget {...this.props} widget={widget}/>
     );
   }
 

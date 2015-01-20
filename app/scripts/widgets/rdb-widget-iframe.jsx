@@ -1,10 +1,8 @@
 var React = require('react');
-var WidgetMixin = require('WidgetMixin');
+var BaseWidget = require('./rdb-base-widget.jsx');
    
 var Widget = React.createClass({
-  
-  mixins: [WidgetMixin],
-  
+    
   getDefaultProps: function(){
     return {
       src : 'http://news.ycombinator.com'
@@ -17,17 +15,14 @@ var Widget = React.createClass({
 
   render: function() {
     
-    var style = { width : '100%', height: '100%' };
-    
-    return (
-      <div className="rdb-widget-wrapper rdb-widget-iframe">
-        <div className="rdb-widget-content">
-          { this.getTitle() }
+    var style = { width : '100%', height: '100%' },
+        widget = (
           <div className="rdb-widget">
             <iframe src={this.props.src} frameBorder="0" style={ style }></iframe>
-          </div> 
-        </div>
-      </div>
+          </div>);
+    
+    return (
+      <BaseWidget {...this.props} widget={widget}/>
     );
   }
 
