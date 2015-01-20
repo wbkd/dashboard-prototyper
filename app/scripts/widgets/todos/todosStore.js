@@ -1,6 +1,9 @@
 var Reflux = require('reflux');
 var store = require('store');
 
+// TODO: Restructure stores and actions.
+// This will not work! We need a generative Store/Actions in order to manage several components.
+
 var TodosActions = require('./todosActions');
 
 var Store = Reflux.createStore({
