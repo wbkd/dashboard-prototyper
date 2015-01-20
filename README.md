@@ -61,7 +61,8 @@ Properties:
 
 Example config file:
 
-```json
+```
+
 module.exports = {
   name: 'Awesome dashboard',
   style: {
@@ -117,8 +118,10 @@ Properties:
 * `boardcol` Font color of the boards. Default: `'#222222'`
 
 
-Example appearance:
-```json
+Example style:
+
+```
+
   style: {
     font : 'PT Sans',
     titlebg : '#eeeeee',
@@ -128,7 +131,8 @@ Example appearance:
     boardbg : '#f4f4f4',
     boardcol : '#222222'
   }
-```json
+  
+```
 
 
 ## Boards
@@ -139,14 +143,16 @@ The board component (`app/scripts/components/rdb-board.jsx`) then displays the t
 
 Example board:
 
-```json
-    {
-      name: 'Site A',
-      widgets: [
-        {type : 'map', properties: { center : [52.25, 13.4] }}, 
-        {type : 'line', properties: { data : jsonObj }}
-      ]
-    },
+```javascript
+
+{
+  name: 'Site A',
+  widgets: [
+    {type : 'map', properties: { center : [52.25, 13.4] }}, 
+    {type : 'line', properties: { data : jsonObj }}
+  ]
+}
+    
 ```
 
 ## Widgets
@@ -179,19 +185,19 @@ Properties:
 Example Map Widget Configuration:
 
 ```javascript
+
 { type: 'map',
   properties: {
     title: 'map title',
     center: [52.52, 13.4],
     zoom : 10,
-    marker: [{
-      latlng: [52.52, 13.4],
-      text : 'This is a marker.'
-    },{
-      latlng: [52.55, 13.35]
-    }]
+    marker: [
+      { latlng: [52.52, 13.4], text : 'This is a marker.'},
+      {latlng: [52.55, 13.35]}
+    ]
   }
 }
+
 ```
 Source: [Map Widget](app/scripts/widgets/rdb-widget-map.jsx)
 
@@ -209,6 +215,7 @@ Properties:
 Example Map Widget Configuration:
 
 ```javascript
+
 {
   type: 'bar',
   properties: {
@@ -217,6 +224,7 @@ Example Map Widget Configuration:
     keys : ['alpha', 'gamma']
   }
 }
+
 ```
 Source: [Bar Chart Widget](app/scripts/widgets/rdb-widget-bar.jsx)
 
