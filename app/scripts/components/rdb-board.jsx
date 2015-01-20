@@ -1,5 +1,4 @@
 var React = require('react');
-var MapWidget = require('../widgets/rdb-widget-map.jsx');
 var widgetFactory = require('../factories/rdb-widget-factory.jsx');
 
 var Board = React.createClass({

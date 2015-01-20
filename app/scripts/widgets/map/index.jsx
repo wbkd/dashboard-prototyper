@@ -1,8 +1,8 @@
 var React = require('react');
-var BaseWidget = require('./rdb-base-widget.jsx');
+var BaseWidget = require('BaseWidget');
 
 var L = require('leaflet');
-require('../../../node_modules/leaflet/dist/leaflet.css');
+require('../../../../node_modules/leaflet/dist/leaflet.css');
 L.Icon.Default.imagePath = 'images';
 
 var Widget = React.createClass({

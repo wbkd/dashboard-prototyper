@@ -1,12 +1,12 @@
 var React = require('react');
-var ChartMixin = require('../mixins/rdb-chart-mixin.js');
-var BaseWidget = require('./rdb-base-widget.jsx');
+var ChartMixin = require('../../mixins/rdb-chart-mixin.js');
+var BaseWidget = require('BaseWidget');
 
 var Widget = React.createClass({
   mixins: [ChartMixin],
 
   componentDidMount: function () {
-     this.chart = this.createChart({ type : 'line' });
+    this.chart = this.createChart({ type : 'bar' });
   },
   
   componentWillUnmount: function(){

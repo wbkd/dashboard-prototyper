@@ -196,7 +196,7 @@ The map widget is based on [Leaflet](http://leafletjs.com). It displays a map wi
 }
 
 ```
-Source: [Map Widget](app/scripts/widgets/rdb-widget-map.jsx)
+Source: [Map Widget](app/scripts/widgets/map/index.jsx)
 
 
 #### Bar Chart Widget
@@ -223,13 +223,13 @@ The bar chart widget is based on [c3](http://c3js.org).
 }
 
 ```
-Source: [Bar Chart Widget](app/scripts/widgets/rdb-widget-bar.jsx)
+Source: [Bar Chart Widget](app/scripts/widgets/bar/index.jsx)
 
 #### Line Chart Widget
 
 Same configuration as the bar chart widget.
 
-Source: [Line Chart Widget](app/scripts/widgets/rdb-widget-line.jsx)
+Source: [Line Chart Widget](app/scripts/widgets/line/index.jsx)
 
 #### IFrame Widget
 
@@ -251,7 +251,7 @@ Displays a certain webpage.
 }
 ```
 
-Source: [IFrame Widget](app/scripts/widgets/rdb-widget-iframe.jsx)
+Source: [IFrame Widget](app/scripts/widgets/iframe/index.jsx)
 
 
 
@@ -265,7 +265,7 @@ The map widget for example loads leaflet.js and the related CSS file:
 ```javascript 
 
 var L = require('leaflet');
-require('../../../node_modules/leaflet/dist/leaflet.css');
+require('../../../../node_modules/leaflet/dist/leaflet.css');
 
 ```
 

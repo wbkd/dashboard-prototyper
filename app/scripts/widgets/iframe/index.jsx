@@ -1,5 +1,5 @@
 var React = require('react');
-var BaseWidget = require('./rdb-base-widget.jsx');
+var BaseWidget = require('BaseWidget');
    
 var Widget = React.createClass({
     

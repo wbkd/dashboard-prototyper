@@ -27,7 +27,8 @@ var defaultConfig = {
     alias: {
       rdbconf: path.resolve(__dirname, 'app/scripts/config/rdb-config.js'),
       rdbutils: path.resolve(__dirname, 'app/scripts/helper/rdb-utils.js'),
-      WidgetMixin: path.resolve(__dirname, 'app/scripts/mixins/rdb-widget-mixin.jsx')
+      WidgetMixin: path.resolve(__dirname, 'app/scripts/mixins/rdb-widget-mixin.jsx'),
+      BaseWidget: path.resolve(__dirname, 'app/scripts/widgets/rdb-base-widget.jsx'),
     }
   }
 }
