@@ -97,7 +97,7 @@ module.exports = {
 ## Style
 
 For now it's only possible to tweak some colors and change the font type.
-You can find the available fonts and the font loading logic in the [Font Loader](app/helper/rdb-font-loader.js).
+You can find the available fonts and the font loading logic in the [Font Loader](app/scripts/helper/rdb-font-loader.js).
 The styles are applied in the [Styler Module](app/scripts/helper/rdb-styler.js).
 
 Available fonts are:
@@ -138,8 +138,8 @@ Example style:
 ## Boards
 
 The boards property is an array with board objects. A board object has a name and and several widgets.
-When you build the dashboard, the several boards are dynamically generated in `app/scripts/routes.jsx` with the help of `app/scripts/factories/rdb-board-factory.jsx`.
-The board component (`app/scripts/components/rdb-board.jsx`) then displays the title and loads its widgets.
+When you build the dashboard, the several boards are dynamically generated in [Routes](app/scripts/routes.jsx) with the help of the [Board Factory](app/scripts/factories/rdb-board-factory.jsx).
+The [Board Component](app/scripts/components/rdb-board.jsx) then displays the title and loads its widgets.
 
 Example board:
 
@@ -159,7 +159,7 @@ Example board:
 
 The widgets are defined in the board objects. A widget object has a type and properties.
 The type specifies the widget type and the properties define all data that get passed to the widget.
-Widgets are created in the board component (`app/scripts/components/rdb-board.jsx`) with the help of `app/scripts/factories/rdb-widget-factory.jsx`.
+Widgets are created in the [Board Component](app/scripts/components/rdb-board.jsx) with the help of [Widget Factory](app/scripts/factories/rdb-widget-factory.jsx).
 
 For now there are these widgets available:
 
@@ -265,7 +265,8 @@ Source: [IFrame Widget](app/scripts/widgets/rdb-widget-iframe.jsx)
 Every widgets ships its own dependencies. You can use the css-loader to load CSS dependencies.
 The map widget for example loads leaflet.js and the related CSS file:
 
-```
+```javascript 
+
 var L = require('leaflet');
 require('../../../node_modules/leaflet/dist/leaflet.css');
 
