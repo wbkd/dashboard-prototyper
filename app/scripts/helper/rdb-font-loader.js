@@ -11,10 +11,9 @@ var fonts = {
 
 var defaultFont = 'PT Sans';
 
-module.exports.init = function () {
+module.exports.loadFont = function (fontName) {
   
-  var fontName = style.font, 
-    fontToLoad = fonts[fontName];
+  var fontToLoad = fonts[fontName];
   
   if (typeof fontToLoad === 'undefined') {
     fontName = defaultFont;
@@ -22,7 +21,7 @@ module.exports.init = function () {
   }
   
   // download webfont
-  handleWebfont(fontToLoad);
+  loadWebfont(fontToLoad);
   
   // apply font family to body
   document.body.style.fontFamily = '"' + fontName + '", sans-serif';
@@ -30,7 +29,7 @@ module.exports.init = function () {
 
 
 // google webfont loader script
-function handleWebfont(font){
+function loadWebfont(font){
   window.WebFontConfig = {
     google: {
       families: [font]

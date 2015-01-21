@@ -2,8 +2,10 @@ var React = require('react');
 var Router = require('react-router');
 var routes = require('./routes.jsx');
 
-require('./helper/rdb-font-loader').init();
-require('./helper/rdb-styler').init();
+var style = require('rdbconf').style || {};
+
+require('./helper/rdb-font-loader').loadFont(style.fontName);
+require('./helper/rdb-styler').applyStyles(style);
 
 Router.run(routes, function (Handler) {
   React.render(<Handler />, document.body);

@@ -5,7 +5,9 @@ module.exports = {
   },
   
   dom : {
-    
+    create: function(element){
+      return document.createElement(element);
+    },
     get : function(selector){
       return document.querySelector(selector);
     },
