@@ -15,13 +15,13 @@ RDB is based on our [react starterkit](https://github.com/wbkd/react-starterkit)
 
 # Get Started
 
-### Clone RDB
+#### Clone RDB
 
 ```
 $ git clone https://github.com/wbkd/react-dashboard.git && cd react-dashboard
 ```
 
-### Installation
+#### Installation
 
 Install all dependencies. 
 
@@ -29,7 +29,7 @@ Install all dependencies.
 $ npm install
 ```
 
-### Development
+#### Development
 
 Builds the application and starts a webserver with livereload. By default the webserver starts at port 1337.
 You can define a port with `$ gulp --port 3333`.
@@ -38,7 +38,7 @@ You can define a port with `$ gulp --port 3333`.
 $ gulp
 ```
 
-### Build
+#### Build
 
 Builds a minified version of the application in the dist folder.
 
