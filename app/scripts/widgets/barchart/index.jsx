@@ -10,7 +10,7 @@ var Widget = React.createClass({
   },
   
   componentWillUnmount: function(){
-    this.chart.destroy();
+     this.chart = this.chart.destroy();
   },
   
   render: function() {
