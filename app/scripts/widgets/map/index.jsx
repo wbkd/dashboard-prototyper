@@ -64,8 +64,7 @@ var Widget = React.createClass({
         <div style={ style } id={ this.props._id }></div>
       </div>
     );
-    console.log(this.props)
-    console.log(this.properties)
+
     return (
       <BaseWidget { ...this.props } widget={ widget }/>
     );
