@@ -1,8 +1,6 @@
 var React = require('react');
 var Router = require('react-router');
-var Route = Router.Route;
-var DefaultRoute = Router.DefaultRoute;
-var NotFoundRoute = Router.NotFoundRoute;
+var { Route, DefaultRoute, NotFoundRoute } = Router;
 
 var App = require('./pages/app.jsx');
 var NotFound = require('./pages/notFound.jsx');
@@ -18,14 +16,14 @@ var dynamicRoutes = boards.map(function(board,i){
     boardUrl = utils.boardNameToUrl(boardName),
     Board = BoardFactory.create(board);
   
-  return <Route key={'route-' + i} name={ boardUrl } handler={Board} />
+  return <Route key={ 'route-' + i } name={ boardUrl } handler={ Board } />
 });
 
 var routes = (
-  <Route name="app" path="/" handler={App}>
+  <Route name="app" path="/" handler={ App }>
     { dynamicRoutes }
-    <DefaultRoute handler={BoardFactory.create(boards[0])}/>
-    <NotFoundRoute handler={NotFound}/>
+    <DefaultRoute handler={ BoardFactory.create(boards[0]) }/>
+    <NotFoundRoute handler={ NotFound }/>
   </Route>
 );
 
