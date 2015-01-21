@@ -1,3 +1,7 @@
+/**
+ * Factory that creates Widget objects with a unique key.
+ */
+
 var React = require('react');
 var shortId = require('shortid');
 

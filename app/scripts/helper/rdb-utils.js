@@ -1,9 +1,21 @@
+/**
+ * Some helper methods we use all over the application.
+ */
+
 module.exports = {
   
-  boardNameToUrl : function(name){
-    return name.toLowerCase().replace(/\s/g,'-');
+  /**
+   * Translates a name of a board to the related URL.
+   * @param   {string}   boardName Name of the board
+   * @returns {string} URL of the passed board name.
+   */
+  boardNameToUrl : function(boardName){
+    return boardName.toLowerCase().replace(/\s/g,'-');
   },
   
+  /**
+  * Helper methods to work with the DOM.
+  */
   dom : {
     create: function(element){
       return document.createElement(element);

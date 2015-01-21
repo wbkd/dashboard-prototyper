@@ -1,3 +1,7 @@
+/**
+ * Factory that creates Board objects.
+ */
+
 var React = require('react');
 var Board = require('../components/rdb-board.jsx');
 

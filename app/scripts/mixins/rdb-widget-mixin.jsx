@@ -1,3 +1,8 @@
+/**
+ * This Mixin holds functions and properties that are used by all widgets.
+ * 
+ */ 
+
 var React = require('react');
 
 var WidgetMixin = {

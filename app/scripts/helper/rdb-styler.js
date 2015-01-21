@@ -9,7 +9,6 @@
 var dom = require('rdbutils').dom;
 var merge = require('merge');
 
-// should we do this in a new file?
 var defaultStyle = {
     titlebg : '#eeeeee',
     titlecol : '#222222',
@@ -21,11 +20,16 @@ var defaultStyle = {
     widgetcol: '#222'
 };
 
+/*
+ * Merges the default with config style and creates a styesheet with the certain 
+ * css rules.
+ * 
+ * @param {object} newStyle Custom Style object
+ */
 module.exports.applyStyles = function(newStyle){
   
   var style = merge(defaultStyle, newStyle);
   
-  // we create a stylesheet here because we don't want to wait until a certain component is loaded
   // TODO: is there a better way to apply the styles?!
   
   var stylesheet = dom.create('style');
@@ -43,11 +47,12 @@ module.exports.applyStyles = function(newStyle){
 }
 
 /**
- * Helper method to create CSS Rule
+ * Helper method to create CSS Rule.
+ * 
  * @param   {string} selector Name of the selector.
  * @param   {string} bg Value of the background style
  * @param   {string} col Value of the color style
- * @returns {string} The CSS Rule
+ * @returns {string} CSS Rule
  */
 function getCSSRule(selector, bg, col){
   return selector + '{ color :' + col + '; background: ' + bg + ';}';

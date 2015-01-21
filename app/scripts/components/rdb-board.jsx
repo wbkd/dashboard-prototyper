@@ -1,3 +1,7 @@
+/**
+ * The Board renders its title and the belonging widgets. 
+ */
+
 var React = require('react');
 var widgetFactory = require('../factories/rdb-widget-factory.jsx');
 

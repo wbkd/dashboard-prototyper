@@ -11,6 +11,13 @@ var fonts = {
 
 var defaultFont = 'PT Sans';
 
+/**
+ * Loads related font. If the passed font name is not in the fonts list, 
+ * we load the default font.
+ * 
+ * @param {string} fontName Name of the font we want to load. Has to be
+ *                          in the 'fonts' list.
+ */
 module.exports.loadFont = function (fontName) {
   
   var fontToLoad = fonts[fontName];
@@ -20,15 +27,16 @@ module.exports.loadFont = function (fontName) {
     fontToLoad = fonts[fontName];
   }
   
-  // download webfont
   loadWebfont(fontToLoad);
   
-  // apply font family to body
   document.body.style.fontFamily = '"' + fontName + '", sans-serif';
 };
 
 
-// google webfont loader script
+/**
+ * Helper method that downloads google web font.
+ * @param {string} font Font identifier and font weights.
+ */
 function loadWebfont(font){
   window.WebFontConfig = {
     google: {
