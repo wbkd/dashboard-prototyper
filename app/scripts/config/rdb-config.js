@@ -74,14 +74,5 @@ module.exports = {
     widgetbg: '#fff',
     widgetcol: '#222'
   },
-  boards: [
-    {
-      name: 'Site A',
-      widgets: widgetsA
-    },
-    {
-      name: 'Site B',
-      widgets: widgetsB
-    }
-  ]
+  boards: []
 };

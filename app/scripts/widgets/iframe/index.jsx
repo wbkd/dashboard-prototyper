@@ -18,11 +18,11 @@ var Widget = React.createClass({
     var style = { width : '100%', height: '100%' },
         widget = (
           <div className="rdb-widget">
-            <iframe src={this.props.src} frameBorder="0" style={ style }></iframe>
+            <iframe src={ this.props.src } frameBorder="0" style={ style }></iframe>
           </div>);
     
     return (
-      <BaseWidget {...this.props} widget={widget}/>
+      <BaseWidget { ...this.props } widget={ widget }/>
     );
   }
 

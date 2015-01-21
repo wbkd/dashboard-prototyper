@@ -58,15 +58,15 @@ var Widget = React.createClass({
   
   render: function() {
     
-    var style = {height : '100%'},
+    var style = { height : '100%' },
       widget = (
       <div className="rdb-widget">
-        <div style={style} id={ this.props._id }></div>
+        <div style={ style } id={ this.props._id }></div>
       </div>
     );
     
     return (
-      <BaseWidget {...this.props} widget={widget}/>
+      <BaseWidget { ...this.props } widget={ widget }/>
     );
   }
 

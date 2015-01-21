@@ -19,12 +19,12 @@ var Widget = React.createClass({
         widget = (
           <div style={ style }>
             <div className="rdb-widget">
-              <div id={this.props._id}></div>
+              <div id={ this.props._id }></div>
             </div> 
           </div>);
 
     return (
-      <BaseWidget {...this.props} widget={widget}/>
+      <BaseWidget { ...this.props } widget={ widget }/>
     );
   }
 });

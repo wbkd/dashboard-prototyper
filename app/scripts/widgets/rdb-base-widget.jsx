@@ -1,7 +1,12 @@
+/**
+ * Widgets can use this class to display their content.
+ * Usage: <BaseWidget { ...this.props } widget={ widget }/>
+ */
+
 var React = require('react');
 var WidgetMixin = require('WidgetMixin');
 
-var Widget = React.createClass({
+var BaseWidget = React.createClass({
   mixins: [WidgetMixin],
 
   render: function() {    
@@ -17,4 +22,4 @@ var Widget = React.createClass({
 
 });
 
-module.exports = Widget;
+module.exports = BaseWidget;
