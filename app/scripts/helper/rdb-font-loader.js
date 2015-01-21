@@ -1,5 +1,3 @@
-var style = require('rdbconf').style;
-
 // available fonts
 var fonts = {
   'Droid Sans' : 'Droid+Sans:400,700:latin',
@@ -9,7 +7,7 @@ var fonts = {
   'Open Sans': 'Open+Sans:400,700:latin'
 };
 
-var defaultFont = 'PT Sans';
+var defaultFont = require('rdbDefault').style.font;
 
 /**
  * Loads related font. If the passed font name is not in the fonts list, 

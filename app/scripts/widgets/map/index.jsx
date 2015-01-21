@@ -8,9 +8,9 @@ L.Icon.Default.imagePath = 'images';
 var Widget = React.createClass({
   getDefaultProps: function(){
     return {
-      center : [0,0],
-      marker : null,
-      zoomLevel : 13,
+      center : [52.52,13.4],
+      marker : [ { latlng : [52.52,13.4], text : 'Default Marker.' } ],
+      zoomLevel : 10,
       wmsTileLayerUrl : 'http://tile.stamen.com/toner/{z}/{x}/{y}.png'
     }
   },
@@ -64,7 +64,8 @@ var Widget = React.createClass({
         <div style={ style } id={ this.props._id }></div>
       </div>
     );
-    
+    console.log(this.props)
+    console.log(this.properties)
     return (
       <BaseWidget { ...this.props } widget={ widget }/>
     );

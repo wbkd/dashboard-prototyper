@@ -6,19 +6,23 @@ var App = require('./pages/rdb-app.jsx');
 
 var ErrorFactory = require('./factories/rdb-errorpage-factory.jsx');
 var NotFound = ErrorFactory.create({title: '404', text : 'Route not found.'});
-var NoBoard =  ErrorFactory.create({title: 'No Boards specified.', text : 'Please specify at least one board in the config file.'});
+var NoBoard = ErrorFactory.create({title: 'No Boards specified.', text : 'Please specify at least one board in the config file.'});
 
 var utils = require('rdbutils');
-var rdbconf = require('rdbconf');
+var boards = require('rdbconf').boards;
 var BoardFactory = require('./factories/rdb-board-factory.jsx');
 
-var defaultRoute = rdbconf.boards && rdbconf.boards.length > 0 ? BoardFactory.create(boards[0]) : NoBoard;
+if(utils.isUndefined(boards)){
+  boards = [];
+}
 
-var dynamicRoutes = rdbconf.boards.map(function(board,i){
+var defaultRoute = boards && boards.length > 0 ? BoardFactory.create(boards[0]) : NoBoard;
+
+var dynamicRoutes = boards.map(function(board,i){
   var boardUrl = utils.boardNameToUrl(board.name),
     Board = BoardFactory.create(board);
 
-  return <Route key={ 'route-' + i } name={ boardUrl } handler={ Board } />
+  return <Route key={ 'route-' + i } name={ boardUrl } handler={ Board } />;
 });
 
 var routes = (

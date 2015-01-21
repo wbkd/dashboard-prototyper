@@ -8,17 +8,9 @@
 
 var dom = require('rdbutils').dom;
 var merge = require('merge');
+var fontLoader = require('./rdb-font-loader');
 
-var defaultStyle = {
-    titlebg : '#eeeeee',
-    titlecol : '#222222',
-    sidebarbg : '#303030',
-    sidebarcol : '#f4f4f4',
-    boardbg : '#f4f4f4',
-    boardcol : '#222222',
-    widgetbg: '#fff',
-    widgetcol: '#222'
-};
+var defaultStyle = require('rdbDefault').style;
 
 /*
  * Merges the default with config style and creates a styesheet with the certain 
@@ -30,6 +22,11 @@ module.exports.applyStyles = function(newStyle){
   
   var style = merge(defaultStyle, newStyle);
   
+  createStylesheet(style);   
+  fontLoader.loadFont(style.fontName);
+}
+
+function createStylesheet(style){
   // TODO: is there a better way to apply the styles?!
   
   var stylesheet = dom.create('style');

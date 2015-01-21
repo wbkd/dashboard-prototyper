@@ -5,7 +5,7 @@ var Widget = React.createClass({
     
   getDefaultProps: function(){
     return {
-      src : 'http://news.ycombinator.com'
+      src : 'http://webkid.io'
     }
   },
   

@@ -50,10 +50,11 @@ $ gulp build --type production
 
 ### RDB config file
 
-You can find the config file under `app/config/rdb-config.js`.
-The config file has three attributes (name, [style](#style) and [boards](#boards) with their [widgets](#widgets)).
+You can find the [config file](rdb.config.js) in the root folder. 
+It has three attributes (name, [style](#style) and [boards](#boards)).
 The name is displayed at the top of the sidebar as the title of the dashboard. 
-Appearance indicates stuff like the font, colors etc and under boards (the important part) you configure the different sites and their related widgets.
+Style indicates stuff like the font, colors etc and under boards (the important part) you configure the different boards and their related [widgets](#widgets).
+If you do not specify a property we use the default one, you can find in the [default config](app/scripts/config/rdb-default.config.js).
 
 **Properties:**
 
@@ -283,6 +284,10 @@ var L = require('leaflet');
 require('../../../../node_modules/leaflet/dist/leaflet.css');
 
 ```
+
+If we want to check out a widget we don't want to specify any properties. We just want to see the widget.
+Because of that it's important that the widget has at least some default properties, so that something get rendered if we add the widget to a board.
+ 
 
 #### Writing your own Widgets
 

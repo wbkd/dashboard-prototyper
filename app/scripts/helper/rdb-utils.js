@@ -13,6 +13,10 @@ module.exports = {
     return boardName.toLowerCase().replace(/\s/g,'-');
   },
   
+  isUndefined: function(obj){
+    return typeof obj === 'undefined';
+  },
+  
   /**
   * Helper methods to work with the DOM.
   */
