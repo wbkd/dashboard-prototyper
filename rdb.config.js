@@ -7,7 +7,7 @@ module.exports = {
     {
       name: 'site a',
       widgets: [
-        { type: 'map',  properties: { title : 'Map Widget' } },
+        { type: 'map' },
         { type: 'iframe' }
       ]
     }, {

@@ -15,3 +15,14 @@
 .rdb-widget-todos ul li:hover{
   background:#eee;
 }
+.rdb-widget-todos .rdb-widget-todos-add{
+  position: absolute;
+  bottom:0;
+  text-align: center;
+  width: 100%;
+  padding:.5rem 0;
+  border-top:1px solid #eee;
+  cursor: pointer;
+  background:#eee;
+  user-select:none;
+}

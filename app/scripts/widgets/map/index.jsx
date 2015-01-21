@@ -9,7 +9,7 @@ var Widget = React.createClass({
   getDefaultProps: function(){
     return {
       center : [52.52,13.4],
-      marker : [ { latlng : [52.52,13.4], text : 'Default Marker.' } ],
+      marker : [],
       zoomLevel : 10,
       wmsTileLayerUrl : 'http://tile.stamen.com/toner/{z}/{x}/{y}.png'
     }
