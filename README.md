@@ -162,10 +162,10 @@ Widgets are created in the [Board Component](app/scripts/components/rdb-board.js
  
 For now there are these widgets available:
 
-* Map Widget
-* Bar Chart Widget
-* Line Chart Widget
-* IFrame Widget
+* [Map Widget](#map-widget)
+* [Bar Chart Widget](#bar-chart-widget)
+* [Line Chart Widget](#line-chart-widget)
+* [IFrame Widget](#iframe-widget)
 
 ### Map Widget
 
